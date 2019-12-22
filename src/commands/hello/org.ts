@@ -41,6 +41,7 @@ export default class Org extends SfdxCommand {
   protected static requiresProject = false;
 
   public async run(): Promise<AnyJson> {
+    console.log('Executing run');
     const name = this.flags.name || 'world';
 
     // this.org is guaranteed because requiresUsername=true, as opposed to supportsUsername
